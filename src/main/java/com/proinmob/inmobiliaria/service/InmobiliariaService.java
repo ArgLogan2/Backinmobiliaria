@@ -13,27 +13,27 @@ public class InmobiliariaService implements IInmobiliariaService{
     public InmobiliariaRepository Inmobiliariarepo;
     
     @Override
-    public List<Inmobiliaria> verComponente() {
-        return Inmobiliariarepo.findAll();
+    public List<Inmobiliaria> verInmobiliaria() {
+         return Inmobiliariarepo.findAll();
     }
 
     @Override
-    public void crearComponente(Inmobiliaria dato) {
+    public void crearInmobiliaria(Inmobiliaria dato) {
         Inmobiliariarepo.save(dato);
     }
 
     @Override
-    public void borraComponente(Long id) {
+    public void borraInmobiliaria(Long id) {
         Inmobiliariarepo.deleteById(id);
     }
 
     @Override
-    public Inmobiliaria buscaComponente(Long id) {
+    public Inmobiliaria buscaInmobiliaria(Long id) {
         return Inmobiliariarepo.findById(id).orElse(null);
     }
 
     @Override
-    public void actualizaComponente(Inmobiliaria dato) {
+    public void actualizaInmobiliaria(Inmobiliaria dato) {
         Inmobiliariarepo.save(dato);
     }
     
