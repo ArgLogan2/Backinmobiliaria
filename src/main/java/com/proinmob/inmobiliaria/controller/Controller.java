@@ -95,4 +95,10 @@ public class Controller {
     public void acualizaInmobiliaria(@RequestBody Inmobiliaria inmobiliaria ){
         inmobiliariaService.actualizaInmobiliaria(inmobiliaria);
     }   
+    
+    //-----------------------Shopping Page-----------------------------------
+    
+
+
+    //------------------------------------------------------------------------
 }
