@@ -96,3 +96,4 @@ public class Controller {
         inmobiliariaService.actualizaInmobiliaria(inmobiliaria);
     }   
 }
+//"Appraisals Page"//
