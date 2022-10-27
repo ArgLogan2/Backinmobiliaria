@@ -10,22 +10,21 @@ import lombok.Setter;
 
 @Entity
 @Getter @Setter
-public class Inmobiliaria implements Serializable {
+public class Location implements Serializable {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)     
     private Long id;
     
-    private String nombre;
-    private String foto;
-    private String foto2;
+    private String name;
+    
+    /* Se genera una FK que trae objetos Property */
 
-    public Inmobiliaria() {
+    public Location() {
     }
 
-    public Inmobiliaria(Long id, String nombre, String foto, String foto2) {
+    public Location(Long id, String name) {
         this.id = id;
-        this.nombre = nombre;
-        this.foto = foto;
-        this.foto2 = foto2;
-    }    
+        this.name = name;
+    }
+
 }
