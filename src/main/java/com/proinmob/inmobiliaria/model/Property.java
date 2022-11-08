@@ -19,6 +19,7 @@ public class Property implements Serializable {
     private Long id;
     
     private String tittle;
+    private String currency;
     private Long price ;
     private Long land;
     private Long covered;
@@ -45,14 +46,15 @@ public class Property implements Serializable {
     
     @ManyToOne
     @JoinColumn(name="propertySituation")
-    PropertySituation propertySituatio;
+    PropertySituation propertySituation;
 
     public Property() {
     }
 
-    public Property(Long id, String tittle, Long price, Long land, Long covered, Long rooms, Long bathrooms, Boolean featured, String description, Owner owner, Location location, TypeProperty typeProperty, PropertySituation propertySituatio) {
+    public Property(Long id, String tittle, String currency, Long price, Long land, Long covered, Long rooms, Long bathrooms, Boolean featured, String description, Owner owner, Location location, TypeProperty typeProperty, PropertySituation propertySituation) {
         this.id = id;
         this.tittle = tittle;
+        this.currency = currency;
         this.price = price;
         this.land = land;
         this.covered = covered;
@@ -63,6 +65,6 @@ public class Property implements Serializable {
         this.owner = owner;
         this.location = location;
         this.typeProperty = typeProperty;
-        this.propertySituatio = propertySituatio;
-    }
+        this.propertySituation = propertySituation;
+    }   
 }
