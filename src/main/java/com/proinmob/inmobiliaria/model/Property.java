@@ -26,8 +26,9 @@ public class Property implements Serializable {
     private Long rooms;
     private Long bathrooms;
     private Boolean featured;
+    @Column(name="DESCRIPTION", length=1000)
     private String description;
-    @Column(name = "description", length = 3000)
+    
 
     /* Las variables planteadas como arrays fueron convertidas en otras Entitys
     las cuales hacen referencia a esta Entity generandose en esta ambas FK: Image e Information*/
@@ -47,6 +48,8 @@ public class Property implements Serializable {
     @ManyToOne
     @JoinColumn(name="propertySituation")
     PropertySituation propertySituation;
+    
+    
 
     public Property() {
     }
